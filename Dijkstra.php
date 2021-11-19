@@ -5,9 +5,9 @@ function MinimumDistance($distance, $shortestPathTreeSet, $verticesCount)
 {
 	global $INT_MAX;
 	$min = $INT_MAX;
-	$minIndex = 0;
+	$minIndex = 0; //Initializing first index as 0.
 
-	for ($v = 0; $v < $verticesCount; ++$v)
+	for ($v = 0; $v < $verticesCount; ++$v) //First index as v
 	{
 		if ($shortestPathTreeSet[$v] == false && $distance[$v] <= $min)
 		{
@@ -18,6 +18,8 @@ function MinimumDistance($distance, $shortestPathTreeSet, $verticesCount)
 
 	return $minIndex;
 }
+
+//For printing the result
 
 function PrintResult($distance, $verticesCount)
 {
@@ -53,6 +55,8 @@ function Dijkstra($graph, $source, $verticesCount)
 
 	PrintResult($distance, $verticesCount);
 }
+
+//Providing the array
 
 $graph = array(
 	array(0, 4, 0, 0, 0, 0, 0, 8, 0),
